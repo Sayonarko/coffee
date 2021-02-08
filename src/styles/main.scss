@@ -228,16 +228,36 @@
                 }
             }
 
-            .swiper__dots {
-                display: flex;
-                justify-content: center;
-
-                .dot {
-                    width: 10px;
-                    height: 10px;
-                    background-color: white;
-                }
-            }
         }
+
+        .swiper-pagination {
+            display: flex;
+            justify-content: center;
+            height: 25px;
+            align-items: center;
+        }
+
+        .swiper-pagination-bullet {
+            width: 10px;
+            height: 10px;
+            text-align: center;
+            background: white;
+            border-radius: 50%;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            transition: height 0.3s ease,
+                        width 0.3s ease;
+
+            & + .swiper-pagination-bullet {
+                margin-left: 10px;
+            }
+          }
+      
+          .swiper-pagination-bullet-active {
+              width: 15px;
+              height: 15px;
+            background: $accent-color;
+          }
     }
 }
