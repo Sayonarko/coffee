@@ -150,8 +150,8 @@
     }
 
     .quote {
-        &__slider {
-            background:white;
+        .swiper-container {
+            overflow: hidden;
             height: 260px;
             max-width: 770px;
             margin: 0 auto;
@@ -186,12 +186,18 @@
                 pointer-events: none;
             }
 
-            .slide {
+            .swiper-wrapper {
+                height: 100%;
+                display: flex;
+                width: max-content;
+            }
+
+            .swiper-slide {
+                background:white;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
                 height: 100%;
-                width: 100%;
                 padding: 45px 70px;
                 &__text {
                     font-size: 26px;
@@ -219,6 +225,17 @@
                         margin-right: 15px;
                     }
 
+                }
+            }
+
+            .swiper__dots {
+                display: flex;
+                justify-content: center;
+
+                .dot {
+                    width: 10px;
+                    height: 10px;
+                    background-color: white;
                 }
             }
         }

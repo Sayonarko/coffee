@@ -71,14 +71,12 @@
         "yargs": "^15.4.1"
     },
     "dependencies": {
-        "smart-grid": "^2.1.2"
+        "smart-grid": "^2.1.2",
+        "swiper": "^6.4.11"
     },
     "lint-staged": {
         "!(_*).scss": [
             "stylelint --fix --color --config ./.stylelintrc"
-        ],
-        "*.js": [
-            "eslint --fix --color"
         ]
     }
 }
