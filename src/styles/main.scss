@@ -3,5 +3,224 @@
 @import "helpers/functions";
 @import "vendor/libs";
 @import "base/fonts";
+@import "base/grid";
 @import "base/general";
-@import "../blocks/modules";
+
+.header {
+    background: url('../img/header/header-bg.png') center center no-repeat;
+
+    .container_full {
+        height: 110px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid $accent-color;
+
+        .menu {
+            .menu__container {
+                display: flex;
+
+                .menu__item {
+                    list-style: none;
+                    padding: 10px 0;
+
+                    &+.menu__item {
+                        margin-left: 30px;
+                    }
+
+                    .menu__link {
+                        color: white;
+                        text-decoration: none;
+                        font-family: 'Oswald', sans-serif;
+                        font-size: 14px;
+                        font-weight: 500;
+                        text-transform: uppercase;
+                        transition: color 0.3s ease;
+
+                        &:active,
+                        &:hover,
+                        &:focus {
+                            color: $accent-color;
+                        }
+                    }
+                }
+            }
+        }
+
+        .lang-social {
+            display: flex;
+            align-items: center;
+
+            .lang {
+                margin-right: 15px;
+                font-family: 'Oswald', sans-serif;
+                font-size: 14px;
+                font-weight: 600;
+                color: white;
+                background: transparent;
+                border: none;
+                padding: 0 2px;
+
+                option {
+                    background-color: black;
+                }
+
+            }
+
+            .social {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-left: 15px;
+            }
+        }
+    }
+
+
+    .container {
+        padding-top: 240px;
+        padding-bottom: 260px;
+
+        .title {
+            font-family: 'Railway', sans-serif;
+            font-weight: 300;
+            font-style: italic;
+        }
+
+        .sub-title {
+            font-size: 26px;
+            text-transform: uppercase;
+            font-weight: 400;
+            margin-top: 30px;
+        }
+    }
+
+}
+
+.main {
+    background: url("../img/bg.png") center center no-repeat;
+
+    .coffee {
+        .card {
+            @include row-flex();
+
+            & + .card {
+                margin-top: 30px;
+            }
+
+            &:nth-child(odd) {
+                transform: translateX(25%);
+            }
+
+            &__desc {
+                @include col();
+                @include size(6);
+                padding: 30px 0;
+                max-width: 400px;
+            }
+
+            &__text {
+                text-align: justify;
+            }
+
+            &__img {
+                @include col();
+
+                img {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+    
+    .about-us {
+        &__desc {
+            background: url("../img/about-us/about-us-bg.png") center center no-repeat;
+            background-size: contain;
+            color: black;
+            padding: 70px;
+            box-sizing: border-box;
+
+            .text {
+                max-width: 400px;
+                margin: 20px auto 0;
+            }
+
+        }
+    }
+
+    .quote {
+        &__slider {
+            background:white;
+            height: 260px;
+            max-width: 770px;
+            margin: 0 auto;
+            border: 3px solid $accent-color;
+            position: relative;
+
+            &::before {
+                content: '“';
+                color: $accent-color;
+                font-size: 150px;
+                font-family: "Railway", sans-serif;
+                line-height: 55px;
+                font-weight: 600;
+                position: absolute;
+                display: block;
+                top: 0;
+                left: -100px;
+                pointer-events: none;
+            }
+
+            &::after {
+                content: '“';
+                color: $accent-color;
+                font-size: 150px;
+                font-family: "Railway", sans-serif;
+                line-height: 55px;
+                font-weight: 600;
+                position: absolute;
+                display: block;
+                bottom: -40px;
+                right: -100px;
+                pointer-events: none;
+            }
+
+            .slide {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 100%;
+                width: 100%;
+                padding: 45px 70px;
+                &__text {
+                    font-size: 26px;
+                    font-weight: 300;
+                    color: black;
+                    margin: 0;
+
+                }
+
+                &__sign {
+                    display: flex;
+                    align-items: center;
+                    align-self: flex-end;
+                    margin-top: auto;
+                    color: $accent-color;
+                    font-weight: 600;
+                    text-transform: uppercase;
+
+                    &::before {
+                        background-color: $accent-color;
+                        width: 50px;
+                        height: 2px;
+                        display: block;
+                        content: "";
+                        margin-right: 15px;
+                    }
+
+                }
+            }
+        }
+    }
+}

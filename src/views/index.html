@@ -1,34 +1,229 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>gulp-scss-starter</title>
-        <meta name="theme-color" content="#fff">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-        <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
-        <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
-        <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
-        <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
-        <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
-        <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
-        <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
-        <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
-        <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
-        <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
-        <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
-        <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
-        <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
-        <link rel="stylesheet" href="styles/main.css">
-    </head>
-    <body>
-        @@include("../blocks/modules/header/header.html")
-        @@include("../blocks/modules/footer/footer.html")
-        <script src="js/main.js"></script>
-        <script src="js/vendor.js"></script>
-    </body>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>gulp-scss-starter</title>
+    <meta name="theme-color" content="#fff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&family=Raleway:ital,wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container_full">
+            <a href="/" class="logo">
+                <img src="../img/logo.svg.png" alt="coffee">
+            </a>
+            <nav class="menu">
+                <ul class="menu__container">
+                    <li class="menu__item">
+                        <a href="/" class="menu__link">
+                            home
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#coffee" class="menu__link">
+                            coffee
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#about" class="menu__link">
+                            about us
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#quote" class="menu__link">
+                            testimonials
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#contact" class="menu__link">
+                            Contacts us
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="lang-social">
+                <select name="lang" id="lang" class="lang">
+                    <option value="en">EN</option>
+                    <option value="ru">RU</option>
+                    <option value="ukr">UKR</option>
+
+                </select>
+                <a href="#" class="social">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21px"
+                        height="21px">
+                        <defs>
+                            <filter id="Filter_0">
+                                <feFlood flood-color="rgb(255, 255, 255)" flood-opacity="1" result="floodOut" />
+                                <feComposite operator="atop" in="floodOut" in2="SourceGraphic" result="compOut" />
+                                <feBlend mode="normal" in="compOut" in2="SourceGraphic" />
+                            </filter>
+
+                        </defs>
+                        <g filter="url(#Filter_0)">
+                            <path fill-rule="evenodd" fill="rgb(0, 0, 0)"
+                                d="M4.316,0.017 C3.265,0.017 2.366,0.390 1.620,1.136 C0.873,1.883 0.500,2.782 0.500,3.833 L0.500,16.554 C0.500,17.605 0.873,18.504 1.620,19.250 C2.366,19.996 3.265,20.370 4.316,20.370 L11.366,20.370 L11.366,12.486 L8.715,12.486 L8.715,9.411 L11.366,9.411 L11.366,7.146 C11.366,5.856 11.726,4.858 12.446,4.151 C13.165,3.444 14.126,3.091 15.328,3.091 C16.343,3.091 17.130,3.130 17.686,3.210 L17.686,5.953 L16.070,5.966 C15.469,5.966 15.065,6.090 14.857,6.337 C14.650,6.585 14.546,6.956 14.546,7.450 L14.546,9.411 L17.580,9.411 L17.183,12.486 L14.546,12.486 L14.546,20.370 L17.037,20.370 C18.088,20.370 18.987,19.996 19.734,19.250 C20.480,18.504 20.853,17.605 20.853,16.554 L20.853,3.833 C20.853,2.782 20.480,1.883 19.734,1.136 C18.987,0.390 18.088,0.017 17.037,0.017 L4.316,0.017 Z" />
+                        </g>
+                    </svg>
+                </a>
+                <a href="#" class="social">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21px"
+                        height="21px">
+                        <defs>
+                            <filter id="Filter_0">
+                                <feFlood flood-color="rgb(255, 255, 255)" flood-opacity="1" result="floodOut" />
+                                <feComposite operator="atop" in="floodOut" in2="SourceGraphic" result="compOut" />
+                                <feBlend mode="normal" in="compOut" in2="SourceGraphic" />
+                            </filter>
+
+                        </defs>
+                        <g filter="url(#Filter_0)">
+                            <path fill-rule="evenodd" fill="rgb(0, 0, 0)"
+                                d="M17.677,17.883 C17.524,18.032 17.340,18.107 17.128,18.107 L3.465,18.107 C3.243,18.107 3.058,18.032 2.909,17.883 C2.760,17.734 2.685,17.549 2.685,17.327 L2.685,9.045 L4.488,9.045 C4.317,9.582 4.232,10.140 4.232,10.720 C4.232,12.356 4.828,13.751 6.021,14.905 C7.214,16.060 8.650,16.637 10.328,16.637 C11.436,16.637 12.458,16.373 13.396,15.845 C14.333,15.316 15.074,14.598 15.620,13.691 C16.165,12.784 16.437,11.793 16.437,10.720 C16.437,10.140 16.352,9.582 16.182,9.045 L17.907,9.045 L17.907,17.327 C17.907,17.549 17.831,17.734 17.677,17.883 ZM10.328,14.336 C9.246,14.336 8.320,13.964 7.548,13.218 C6.777,12.473 6.392,11.572 6.392,10.515 C6.392,9.459 6.777,8.557 7.548,7.812 C8.320,7.066 9.246,6.694 10.328,6.694 C11.419,6.694 12.350,7.066 13.121,7.812 C13.892,8.557 14.278,9.459 14.278,10.515 C14.278,11.572 13.892,12.473 13.121,13.218 C12.350,13.964 11.419,14.336 10.328,14.336 L10.328,14.336 ZM17.652,6.540 C17.481,6.711 17.272,6.796 17.025,6.796 L14.801,6.796 C14.554,6.796 14.346,6.711 14.175,6.540 C14.005,6.370 13.920,6.162 13.920,5.914 L13.920,3.805 C13.920,3.567 14.005,3.360 14.175,3.185 C14.346,3.011 14.554,2.923 14.801,2.923 L17.025,2.923 C17.272,2.923 17.481,3.011 17.652,3.185 C17.822,3.360 17.907,3.567 17.907,3.805 L17.907,5.914 C17.907,6.162 17.822,6.370 17.652,6.540 ZM19.390,1.479 C18.896,0.985 18.304,0.738 17.613,0.738 L3.018,0.738 C2.328,0.738 1.735,0.985 1.241,1.479 C0.747,1.973 0.500,2.565 0.500,3.256 L0.500,17.851 C0.500,18.541 0.747,19.134 1.241,19.628 C1.735,20.122 2.328,20.369 3.018,20.369 L17.613,20.369 C18.304,20.369 18.896,20.122 19.390,19.628 C19.884,19.134 20.131,18.541 20.131,17.851 L20.131,3.256 C20.131,2.565 19.884,1.973 19.390,1.479 Z" />
+                        </g>
+                    </svg>
+                </a>
+                <a href="#" class="social">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21px"
+                        height="21px">
+                        <defs>
+                            <filter id="Filter_0">
+                                <feFlood flood-color="rgb(255, 255, 255)" flood-opacity="1" result="floodOut" />
+                                <feComposite operator="atop" in="floodOut" in2="SourceGraphic" result="compOut" />
+                                <feBlend mode="normal" in="compOut" in2="SourceGraphic" />
+                            </filter>
+
+                        </defs>
+                        <g filter="url(#Filter_0)">
+                            <path fill-rule="evenodd" fill="rgb(0, 0, 0)"
+                                d="M15.939,7.952 C15.948,8.031 15.952,8.149 15.952,8.307 C15.952,9.043 15.845,9.781 15.630,10.521 C15.416,11.261 15.087,11.971 14.645,12.650 C14.202,13.328 13.675,13.929 13.061,14.450 C12.448,14.971 11.712,15.387 10.854,15.698 C9.995,16.009 9.076,16.164 8.095,16.164 C6.570,16.164 5.160,15.753 3.864,14.929 C4.074,14.956 4.293,14.969 4.521,14.969 C5.791,14.969 6.934,14.575 7.950,13.786 C7.354,13.778 6.822,13.594 6.354,13.234 C5.885,12.875 5.559,12.420 5.375,11.868 C5.602,11.903 5.773,11.920 5.887,11.920 C6.080,11.920 6.303,11.885 6.557,11.815 C5.918,11.692 5.379,11.375 4.941,10.862 C4.503,10.350 4.284,9.765 4.284,9.108 L4.284,9.082 C4.748,9.301 5.186,9.415 5.598,9.424 C4.801,8.889 4.402,8.123 4.402,7.124 C4.402,6.634 4.529,6.170 4.783,5.731 C5.475,6.581 6.316,7.260 7.306,7.768 C8.296,8.276 9.356,8.561 10.486,8.622 C10.442,8.456 10.420,8.245 10.420,7.991 C10.420,7.229 10.690,6.579 11.228,6.040 C11.767,5.502 12.418,5.232 13.180,5.232 C13.986,5.232 14.656,5.521 15.190,6.099 C15.794,5.986 16.381,5.762 16.951,5.429 C16.732,6.104 16.324,6.616 15.729,6.966 C16.298,6.888 16.828,6.739 17.319,6.520 C16.951,7.081 16.491,7.558 15.939,7.952 L15.939,7.952 ZM19.572,1.297 C18.832,0.557 17.941,0.187 16.898,0.187 L4.284,0.187 C3.242,0.187 2.350,0.557 1.610,1.297 C0.870,2.037 0.500,2.928 0.500,3.971 L0.500,16.585 C0.500,17.627 0.870,18.518 1.610,19.259 C2.350,19.999 3.242,20.369 4.284,20.369 L16.898,20.369 C17.941,20.369 18.832,19.999 19.572,19.259 C20.312,18.518 20.682,17.627 20.682,16.585 L20.682,3.971 C20.682,2.928 20.312,2.037 19.572,1.297 Z" />
+                        </g>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="container">
+            <h1 class="title">Coffee beans</h1>
+            <h3 class="sub-title">enjoy delicious coffee</h3>
+        </div>
+    </header>
+    <main class="main">
+        <section class="coffee" id="coffee">
+            <div class="container">
+                <h2 class="title">Chosse your coffee</h2>
+                <div class="card">
+                    <div class="card__desc">
+                        <h3 class="card__title">Supremo</h3>
+                        <p class="card__text">The best variety, for the processing of which the latest technologies are
+                            used, large and even grains. It has a rather rich taste, velvety aroma. Medium-bodied coffee
+                            with a subtle fruity aftertaste. A very harmonious, slightly fruity and long-lasting coffee,
+                            the equivalent of good champagne in the coffee world! Country: Colombia</p>
+                    </div>
+                    <div class="card__img">
+                        <img src="../img/coffee/supremo.png" alt="supremo">
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__img">
+                        <img src="../img/coffee/extra.png" alt="extra">
+                    </div>
+                    <div class="card__desc">
+                        <h3 class="card__title">Extra</h3>
+                        <p class="card__text">Slightly inferior in terms of quality, but, nevertheless, also has a high
+                            class. The size of coffee beans is slightly smaller than that of a supremo, and this
+                            indicator is one of the determining factors when sorting coffee beans. The taste of coffee
+                            is very strong and full. Country: Colombia</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__desc">
+                        <h3 class="card__title">Excelso</h3>
+                        <p class="card__text">Excelso coffee is softer and more acidic than supremo. It is obtained by mixing the other two - superior and extra. The drink turns out to be softer and with higher acidity, with a pronounced aroma and a hint of prunes. Excelso is produced by mixing two of the highest quality varieties, supremo and extra. Country: Columbia</p>
+                    </div>
+                    <div class="card__img">
+                        <img src="../img/coffee/excelso.png" alt="excelso">
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__img">
+                        <img src="../img/coffee/antigua.png" alt="antigua">
+                    </div>
+                    <div class="card__desc">
+                        <h3 class="card__title">Antigua volcanic</h3>
+                        <p class="card__text">The taste of the most famous variety "Antigua volcanic" is distinguished by a complex, heavy taste with bitterness, strength and exquisite aroma with hints of smoke. Country: Guatemala. This type of coffee is native to mountainous areas.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__desc">
+                        <h3 class="card__title">Santos</h3>
+                        <p class="card__text">It is considered the best and most demanded. World standard made from real arabica. It combines mild astringency, light sourness and chocolate aftertaste. The taste is due to the fact that in Brazil there are practically no hills that give coffee beans sourness and bitterness. Country: Brazil</p>
+                    </div>
+                    <div class="card__img">
+                        <img src="../img/coffee/santos.png" alt="santos">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about-us" id="about">
+            <div class="container">
+                <h2 class="title">about us</h2>
+                <div class="about-us__desc">
+                    <h3 class="title">Welcome to our wonderful<br>coffee beans store!</h3>
+                    <p class="text">We are suppliers of quality coffee from Colombia, Guatemala and Brazil. We are glad to every client, so you can buy coffee wholesale and retail. We also have discounts for the subscription of the order of our coffee.<br>
+                        For 10 years we have been delighting you with quality and delicious coffee.</p>
+                </div>
+            </div>
+        </section>
+
+        </section>
+        <section class="quote" id="quote">
+            <div class="container">
+                <h2 class="title">Testimonials</h2>
+                <div class="quote__slider">
+                    <div class="slide">
+                        <p class="slide__text">
+                            I have been cooperating with this store for a year. The service is great. Polite consultants and delivery without delays. Caesive coffee. I recommend this store.
+                        </p>
+                        <span class="slide__sign">George Almond</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="contact" id="contact">
+            <div class="container">
+                <h2 class="title">contacts us</h2>
+            </div>
+        </section>
+        <footer class="footer"></footer>
+    </main>
+    <script src="js/main.js"></script>
+    <script src="js/vendor.js"></script>
+</body>
+
 </html>

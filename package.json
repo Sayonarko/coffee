@@ -8,7 +8,7 @@
     },
     "license": "MIT",
     "scripts": {
-        "dev": "gulp",
+        "start": "gulp",
         "build": "gulp prod --production",
         "build:views": "gulp views --production",
         "build:styles": "gulp styles --production",
@@ -72,11 +72,6 @@
     },
     "dependencies": {
         "smart-grid": "^2.1.2"
-    },
-    "husky": {
-        "hooks": {
-            "pre-commit": "lint-staged"
-        }
     },
     "lint-staged": {
         "!(_*).scss": [
