@@ -15,7 +15,17 @@
         justify-content: space-between;
         border-bottom: 1px solid $accent-color;
         @include sm(height, 70px);
+
+        .logo {
+            @include sm(width, 40px);
+
+            img {
+                width: 100%;
+            }
+        }
         .menu {
+            @include sm(display, none);
+
             .menu__container {
                 display: flex;
 
@@ -51,14 +61,12 @@
             align-items: center;
 
             .lang {
-                margin-right: 15px;
                 font-family: 'Oswald', sans-serif;
                 font-size: 14px;
                 font-weight: 600;
                 color: white;
                 background: transparent;
                 border: none;
-                padding: 0 2px;
 
                 option {
                     background-color: black;
@@ -145,11 +153,25 @@
     }
     
     .about-us {
+        .border-1 {
+            padding: 15px;
+            background: white;
+            @include sm(padding, 10px);
+
+
+            .border-2 {
+                padding: 15px;
+                border: 2px solid $accent-color;
+                @include sm(padding, 10px);
+
+            }
+        }
         &__desc {
-            background: url("../img/about-us/about-us-bg.png") center center no-repeat;
-            background-size: contain;
+
             color: black;
             padding: 70px;
+            border: 2px solid $accent-color;
+            @include sm(padding, 10px);
 
             .text {
                 max-width: 400px;
