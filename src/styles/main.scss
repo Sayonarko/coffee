@@ -98,7 +98,9 @@
 }
 
 .main {
-    background: url("../img/bg.png") center center no-repeat;
+    background: url("../img/bg.png") top center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
     .coffee {
         .card {
@@ -109,7 +111,7 @@
             }
 
             &:nth-child(odd) {
-                transform: translateX(25%);
+                justify-content: flex-end;
             }
 
             &__desc {
@@ -139,7 +141,6 @@
             background-size: contain;
             color: black;
             padding: 70px;
-            box-sizing: border-box;
 
             .text {
                 max-width: 400px;
@@ -150,6 +151,7 @@
     }
 
     .quote {
+        overflow: hidden;
         .swiper-container {
             overflow: hidden;
             height: 260px;
@@ -231,9 +233,10 @@
         }
 
         .swiper-pagination {
+            margin-top: 30px;
+            height: 15px;
             display: flex;
             justify-content: center;
-            height: 25px;
             align-items: center;
         }
 
@@ -259,5 +262,19 @@
               height: 15px;
             background: $accent-color;
           }
+    }
+}
+
+.footer {
+    background: #19181c;
+    height: 70px;
+    border-top: 1px solid $accent-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .copyright {
+        font-size: 12px;
+        font-family: "Oswald", sans-serif;
     }
 }

@@ -11,6 +11,7 @@ h1, h2, h3, h4, h5, h6, ul {
     margin: 0;
     padding: 0;
     font-family: 'Oswald', sans-serif;
+    font-weight: 400;
     text-align: center;
 }
 
@@ -37,12 +38,17 @@ footer {
 h1 {
     font-size: 110px;
     font-weight: 300;
+    @include sm(font-size, 72px);
 }
 
 h2 {
     font-size: 68px;
     text-transform: uppercase;
-    letter-spacing: -5px;
+    letter-spacing: -3px;
+    @include md(font-size, 62px);
+
+    @include sm(font-size, 42px);
+
 
     &::after {
         content: "";
@@ -52,6 +58,10 @@ h2 {
         display: block;
         margin: 25px auto 30px;
         pointer-events: none;
+        @include sm(width, 350px);
+        @include sm(background-size, contain);
+
+
     }
 }
 
