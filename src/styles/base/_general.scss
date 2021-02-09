@@ -22,6 +22,7 @@ h1, h2, h3, h4, h5, h6, ul {
 .container {
     @include container();
     padding-top: 150px;
+    @include md(padding-top, 75px);
     @include sm(max-width, 100%);
     @include md(max-width, 750px);
     @include lg(max-width, 950px);
@@ -46,9 +47,7 @@ h2 {
     text-transform: uppercase;
     letter-spacing: -3px;
     @include md(font-size, 62px);
-
     @include sm(font-size, 42px);
-
 
     &::after {
         content: "";
@@ -60,6 +59,9 @@ h2 {
         pointer-events: none;
         @include sm(width, 350px);
         @include sm(background-size, contain);
+        @include sm(margin, 0 auto 10px);
+        @include xs(width, 275px);
+
 
 
     }
@@ -67,8 +69,11 @@ h2 {
 
 h3 {
     font-size: 42px;
+    @include sm(font-size, 32px);
+
 }
 
 p {
     font-size: 20px;
+    @include sm(font-size, 18px);
 }

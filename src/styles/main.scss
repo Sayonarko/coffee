@@ -8,14 +8,13 @@
 
 .header {
     background: url('../img/header/header-bg.png') center center no-repeat;
-
     .container_full {
         height: 110px;
         display: flex;
         align-items: center;
         justify-content: space-between;
         border-bottom: 1px solid $accent-color;
-
+        @include sm(height, 70px);
         .menu {
             .menu__container {
                 display: flex;
@@ -80,6 +79,11 @@
     .container {
         padding-top: 240px;
         padding-bottom: 260px;
+        @include sm-block() {
+            padding-top: 100px;
+            padding-bottom: 200px;
+        }
+
 
         .title {
             font-family: 'Railway', sans-serif;
@@ -108,6 +112,7 @@
 
             & + .card {
                 margin-top: 30px;
+                @include sm(margin-top, 20px);
             }
 
             &:nth-child(odd) {
@@ -117,8 +122,11 @@
             &__desc {
                 @include col();
                 @include size(6);
+                @include size-md(12);
                 padding: 30px 0;
                 max-width: 400px;
+                @include md(max-width, max-content);
+                @include sm(padding, 0);
             }
 
             &__text {
@@ -127,6 +135,7 @@
 
             &__img {
                 @include col();
+                @include md(margin, 0 auto);
 
                 img {
                     max-width: 100%;
@@ -159,6 +168,7 @@
             margin: 0 auto;
             border: 3px solid $accent-color;
             position: relative;
+            @include sm(height, 200px);
 
             &::before {
                 content: '“';
@@ -201,12 +211,15 @@
                 justify-content: space-between;
                 height: 100%;
                 padding: 45px 70px;
+                @include sm(padding, 30px);
+                @include xs(padding, 20px);
+
                 &__text {
                     font-size: 26px;
                     font-weight: 300;
                     color: black;
                     margin: 0;
-
+                    @include sm(font-size, 18px);
                 }
 
                 &__sign {
@@ -234,10 +247,12 @@
 
         .swiper-pagination {
             margin-top: 30px;
-            height: 15px;
+            height: 20px;
             display: flex;
             justify-content: center;
             align-items: center;
+            @include sm(margin-top, 15px);
+
         }
 
         .swiper-pagination-bullet {
