@@ -22,7 +22,7 @@ h1, h2, h3, h4, h5, h6, ul {
 .container {
     @include container();
     padding-top: 150px;
-    @include md(padding-top, 75px);
+    @include md(padding-top, 50px);
     @include sm(max-width, 100%);
     @include md(max-width, 750px);
     @include lg(max-width, 950px);
@@ -75,3 +75,5 @@ p {
     font-size: 20px;
     @include sm(font-size, 18px);
 }
+
+
