@@ -19,8 +19,11 @@ $(window).on("load", function () {
     });
 
     $(".js-modal-close").on("click", openCloseModal);
+});
 
     //swiper
+    import Swiper, {Pagination, Navigation, Autoplay} from "swiper";
+    Swiper.use([Navigation, Pagination, Autoplay]);
     const swiper = new Swiper('.swiper-container', {
         loop: true,
         autoplay: {
@@ -32,5 +35,3 @@ $(window).on("load", function () {
             clickable: true,
         },
     });
-});
-
