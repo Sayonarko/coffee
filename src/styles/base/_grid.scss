@@ -22,16 +22,16 @@ $offset_lg_one_side: ($offset_lg);
 $offset_xl_one_side: ($offset_xl);
 
 $fields: 30px;
-$fields_md: 15px;
+$fields_sm: 15px;
 
 
 @mixin container-full() {
     padding-left: $fields;
     padding-right: $fields;
 
-    @include md-block() {
-            padding-left: $fields_md;
-            padding-right: $fields_md;
+    @include sm-block() {
+            padding-left: $fields_sm;
+            padding-right: $fields_sm;
         }
 }
 
