@@ -9,6 +9,10 @@ $(window).on("load", function () {
     function closeModal() {
         $(".js-modal-container").fadeOut(500);
         $("body").removeClass("disable");
+        setTimeout( function () {
+            $(".js-form").removeClass("hidden");
+            $(".js-done").addClass("hidden");
+        }, 1000);
     }
     $(".js-message").on("click", openModal);
 
@@ -51,3 +55,4 @@ lang.onchange = function () {
     var language = (lang.selectedIndex === 0) ? "/" : (lang.selectedIndex === 1) ? "ru.html" : "ua.html";
     window.location = language;
 }
+
