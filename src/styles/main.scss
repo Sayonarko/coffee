@@ -23,24 +23,24 @@
         flex-grow: 1;
         background: white;
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
         position: relative;
 
         @include xs-block() {
             min-height: auto;
-            max-width: auto;
+            max-width: 100%;
             width: 100vw;
             height: 100vh;
-            padding: 0;
-
+            padding: 15px;
         }
 
         &-close {
-            display: none;
             position: absolute;
-            top: 15px;
             right: 15px;
+            top: 15px;
+            display: none;
             background: transparent;
             border: none;
             outline: none;
@@ -49,6 +49,7 @@
 
             svg {
                 transition: fill 0.3s ease;
+
                 &:active {
                     fill: $active-color;
                 }
@@ -66,7 +67,6 @@
                 flex-direction: column;
                 max-width: 100%;
                 width: 100%;
-                padding: 0 15px;
             }
 
             label {
@@ -178,10 +178,12 @@
 
 
 }
+
 .hidden {
     display: none !important;
     pointer-events: none;
 }
+
 .header {
     background: url('../img/header/header-bg.png') center center no-repeat;
 
@@ -311,6 +313,7 @@
                 @include xs(display, block);
             }
         }
+
         .card {
             @include row-flex();
 
@@ -359,9 +362,12 @@
 
             .border-2 {
                 padding: 15px;
-                border: 2px solid $accent-color;
+                border: 3px solid $accent-color;
                 @include sm(padding, 10px);
-
+                @include xs-block() {
+                    padding: 0;
+                    border: none;
+                }
             }
         }
 
@@ -369,12 +375,54 @@
 
             color: black;
             padding: 70px;
-            border: 2px solid $accent-color;
+            border: 3px solid $accent-color;
+            position: relative;
             @include sm(padding, 10px);
+
+            &::before {
+                content: "";
+                background: url("../img/about-us/deco.svg") center center no-repeat;
+                background-size: contain;
+                width: 115px;
+                height: 115px;
+                display: block;
+                position: absolute;
+                transform: rotate(180deg);
+                top: 15px;
+                left: 15px;
+
+                @include md-block() {
+                    width: 95px;
+                    height: 95px;
+                }
+
+                @include sm(display, none);
+            }
+
+            &::after {
+                content: "";
+                background: url("../img/about-us/deco.svg") center center no-repeat;
+                background-size: contain;
+                width: 115px;
+                height: 115px;
+                display: block;
+                position: absolute;
+                bottom: 15px;
+                right: 15px;
+
+                @include md-block() {
+                    width: 95px;
+                    height: 95px;
+                }
+
+                @include sm(display, none);
+            }
 
             .text {
                 max-width: 400px;
-                margin: 20px auto 0;
+                margin: 30px auto 0;
+                @include md(margin, 20px auto 0);
+                @include xs(text-align, justify);
             }
 
         }
@@ -450,6 +498,7 @@
                     color: black;
                     margin: 0;
                     @include sm(font-size, 18px);
+                    @include xs(text-align, justify);
                 }
 
                 &__sign {
@@ -514,6 +563,8 @@
         .container {
             padding-bottom: 150px;
             @include md(padding-bottom, 75px);
+            @include md(padding-top, 75px);
+
         }
 
         .row {
@@ -652,8 +703,6 @@
 
 .disable {
     overflow-y: hidden;
-    padding-right:16px;
+    padding-right: 16px;
     @include xs(padding, 0);
 }
-
-
