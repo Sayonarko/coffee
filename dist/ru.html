@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Coffee Beans</title>
+    <meta name="theme-color" content="#fff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="img/favicons/favicon.png" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.min.css">
+</head>
+
+<body>
+    <div class="modal-container js-modal-container" style="display: none;">
+        <div class="modal js-modal">
+            <button class="modal-close js-modal-close">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f2cdac" width="45px" height="45px"><path d="M0 0h24v24H0z" fill="none"/><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+            </button>
+            <form action="#" class="form js-form">
+                <label for="name">
+                    Имя
+                    <input type="text" name="name" id="name">
+                </label>
+                <label for="email">
+                    Email
+                    <input type="email" name="email" id="email">
+                </label>
+                <label for="text">
+                    Сообщение
+                    <textarea name="text" id="text" cols="30" rows="10"></textarea>
+                </label>
+                <button type="submit" class="js-form-btn">написать</button>
+            </form>
+            <div class="hidden done js-done">
+                <svg width="57" height="41" viewBox="0 0 57 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="line" d="M2.5 17.3217L21.1183 35.94L54.0583 3" class="sucess-line" stroke="#f2cdac"
+                        stroke-width="6" />
+                </svg>
+            </div>
+        </div>
+    </div>
+    <header class="header">
+        <div class="container_full">
+            <a href="/" class="logo">
+                <img src="../img/logo.png" alt="coffee">
+            </a>
+            <nav class="menu">
+                <ul class="menu__container">
+                    <li class="menu__item">
+                        <a href="/" class="menu__link">
+                            начало
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#coffee" class="menu__link">
+                            кофе
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#about" class="menu__link">
+                            о нас
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#quote" class="menu__link">
+                            отзывы
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#contact" class="menu__link">
+                            свяжитесь с нами
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="lang-social">
+                <select name="lang" id="lang" class="lang">
+                    <option value="">EN</option>
+                    <option value="ru.html">РУС</option>
+                    <option value="ua.html">УКР</option>
+
+                </select>
+                <a href="#" class="social">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21px"
+                        height="21px">
+                        <defs>
+                            <filter id="Filter_0">
+                                <feFlood flood-color="rgb(255, 255, 255)" flood-opacity="1" result="floodOut" />
+                                <feComposite operator="atop" in="floodOut" in2="SourceGraphic" result="compOut" />
+                                <feBlend mode="normal" in="compOut" in2="SourceGraphic" />
+                            </filter>
+
+                        </defs>
+                        <g filter="url(#Filter_0)">
+                            <path fill-rule="evenodd" fill="rgb(0, 0, 0)"
+                                d="M4.316,0.017 C3.265,0.017 2.366,0.390 1.620,1.136 C0.873,1.883 0.500,2.782 0.500,3.833 L0.500,16.554 C0.500,17.605 0.873,18.504 1.620,19.250 C2.366,19.996 3.265,20.370 4.316,20.370 L11.366,20.370 L11.366,12.486 L8.715,12.486 L8.715,9.411 L11.366,9.411 L11.366,7.146 C11.366,5.856 11.726,4.858 12.446,4.151 C13.165,3.444 14.126,3.091 15.328,3.091 C16.343,3.091 17.130,3.130 17.686,3.210 L17.686,5.953 L16.070,5.966 C15.469,5.966 15.065,6.090 14.857,6.337 C14.650,6.585 14.546,6.956 14.546,7.450 L14.546,9.411 L17.580,9.411 L17.183,12.486 L14.546,12.486 L14.546,20.370 L17.037,20.370 C18.088,20.370 18.987,19.996 19.734,19.250 C20.480,18.504 20.853,17.605 20.853,16.554 L20.853,3.833 C20.853,2.782 20.480,1.883 19.734,1.136 C18.987,0.390 18.088,0.017 17.037,0.017 L4.316,0.017 Z" />
+                        </g>
+                    </svg>
+                </a>
+                <a href="#" class="social">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21px"
+                        height="21px">
+                        <defs>
+                            <filter id="Filter_0">
+                                <feFlood flood-color="rgb(255, 255, 255)" flood-opacity="1" result="floodOut" />
+                                <feComposite operator="atop" in="floodOut" in2="SourceGraphic" result="compOut" />
+                                <feBlend mode="normal" in="compOut" in2="SourceGraphic" />
+                            </filter>
+
+                        </defs>
+                        <g filter="url(#Filter_0)">
+                            <path fill-rule="evenodd" fill="rgb(0, 0, 0)"
+                                d="M17.677,17.883 C17.524,18.032 17.340,18.107 17.128,18.107 L3.465,18.107 C3.243,18.107 3.058,18.032 2.909,17.883 C2.760,17.734 2.685,17.549 2.685,17.327 L2.685,9.045 L4.488,9.045 C4.317,9.582 4.232,10.140 4.232,10.720 C4.232,12.356 4.828,13.751 6.021,14.905 C7.214,16.060 8.650,16.637 10.328,16.637 C11.436,16.637 12.458,16.373 13.396,15.845 C14.333,15.316 15.074,14.598 15.620,13.691 C16.165,12.784 16.437,11.793 16.437,10.720 C16.437,10.140 16.352,9.582 16.182,9.045 L17.907,9.045 L17.907,17.327 C17.907,17.549 17.831,17.734 17.677,17.883 ZM10.328,14.336 C9.246,14.336 8.320,13.964 7.548,13.218 C6.777,12.473 6.392,11.572 6.392,10.515 C6.392,9.459 6.777,8.557 7.548,7.812 C8.320,7.066 9.246,6.694 10.328,6.694 C11.419,6.694 12.350,7.066 13.121,7.812 C13.892,8.557 14.278,9.459 14.278,10.515 C14.278,11.572 13.892,12.473 13.121,13.218 C12.350,13.964 11.419,14.336 10.328,14.336 L10.328,14.336 ZM17.652,6.540 C17.481,6.711 17.272,6.796 17.025,6.796 L14.801,6.796 C14.554,6.796 14.346,6.711 14.175,6.540 C14.005,6.370 13.920,6.162 13.920,5.914 L13.920,3.805 C13.920,3.567 14.005,3.360 14.175,3.185 C14.346,3.011 14.554,2.923 14.801,2.923 L17.025,2.923 C17.272,2.923 17.481,3.011 17.652,3.185 C17.822,3.360 17.907,3.567 17.907,3.805 L17.907,5.914 C17.907,6.162 17.822,6.370 17.652,6.540 ZM19.390,1.479 C18.896,0.985 18.304,0.738 17.613,0.738 L3.018,0.738 C2.328,0.738 1.735,0.985 1.241,1.479 C0.747,1.973 0.500,2.565 0.500,3.256 L0.500,17.851 C0.500,18.541 0.747,19.134 1.241,19.628 C1.735,20.122 2.328,20.369 3.018,20.369 L17.613,20.369 C18.304,20.369 18.896,20.122 19.390,19.628 C19.884,19.134 20.131,18.541 20.131,17.851 L20.131,3.256 C20.131,2.565 19.884,1.973 19.390,1.479 Z" />
+                        </g>
+                    </svg>
+                </a>
+                <a href="#" class="social">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21px"
+                        height="21px">
+                        <defs>
+                            <filter id="Filter_0">
+                                <feFlood flood-color="rgb(255, 255, 255)" flood-opacity="1" result="floodOut" />
+                                <feComposite operator="atop" in="floodOut" in2="SourceGraphic" result="compOut" />
+                                <feBlend mode="normal" in="compOut" in2="SourceGraphic" />
+                            </filter>
+
+                        </defs>
+                        <g filter="url(#Filter_0)">
+                            <path fill-rule="evenodd" fill="rgb(0, 0, 0)"
+                                d="M15.939,7.952 C15.948,8.031 15.952,8.149 15.952,8.307 C15.952,9.043 15.845,9.781 15.630,10.521 C15.416,11.261 15.087,11.971 14.645,12.650 C14.202,13.328 13.675,13.929 13.061,14.450 C12.448,14.971 11.712,15.387 10.854,15.698 C9.995,16.009 9.076,16.164 8.095,16.164 C6.570,16.164 5.160,15.753 3.864,14.929 C4.074,14.956 4.293,14.969 4.521,14.969 C5.791,14.969 6.934,14.575 7.950,13.786 C7.354,13.778 6.822,13.594 6.354,13.234 C5.885,12.875 5.559,12.420 5.375,11.868 C5.602,11.903 5.773,11.920 5.887,11.920 C6.080,11.920 6.303,11.885 6.557,11.815 C5.918,11.692 5.379,11.375 4.941,10.862 C4.503,10.350 4.284,9.765 4.284,9.108 L4.284,9.082 C4.748,9.301 5.186,9.415 5.598,9.424 C4.801,8.889 4.402,8.123 4.402,7.124 C4.402,6.634 4.529,6.170 4.783,5.731 C5.475,6.581 6.316,7.260 7.306,7.768 C8.296,8.276 9.356,8.561 10.486,8.622 C10.442,8.456 10.420,8.245 10.420,7.991 C10.420,7.229 10.690,6.579 11.228,6.040 C11.767,5.502 12.418,5.232 13.180,5.232 C13.986,5.232 14.656,5.521 15.190,6.099 C15.794,5.986 16.381,5.762 16.951,5.429 C16.732,6.104 16.324,6.616 15.729,6.966 C16.298,6.888 16.828,6.739 17.319,6.520 C16.951,7.081 16.491,7.558 15.939,7.952 L15.939,7.952 ZM19.572,1.297 C18.832,0.557 17.941,0.187 16.898,0.187 L4.284,0.187 C3.242,0.187 2.350,0.557 1.610,1.297 C0.870,2.037 0.500,2.928 0.500,3.971 L0.500,16.585 C0.500,17.627 0.870,18.518 1.610,19.259 C2.350,19.999 3.242,20.369 4.284,20.369 L16.898,20.369 C17.941,20.369 18.832,19.999 19.572,19.259 C20.312,18.518 20.682,17.627 20.682,16.585 L20.682,3.971 C20.682,2.928 20.312,2.037 19.572,1.297 Z" />
+                        </g>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="container">
+            <h1 class="title">Coffee beans</h1>
+            <h3 class="sub-title">Насладитесь вкусным кофе</h3>
+        </div>
+    </header>
+    <main class="main">
+        <section class="coffee" id="coffee">
+            <div class="container">
+                <h2 class="title">Выберите<br> ваш кофе</h2>
+                <div class="card">
+                    <div class="card__desc">
+                        <h3 class="card__title">Supremo</h3>
+                        <p class="card__text">Лучший сорт, для обработки которого применяются новейшие технологии,
+                            используется крупное и ровное зерно. Имеет довольно насыщенный вкус, бархатистый аромат. Кофе средней полноты
+                            с тонким фруктовым послевкусием. Очень гармоничный, слегка фруктовый и стойкий кофе,
+                            эквивалент хорошего шампанского в кофейном мире! Страна: Колумбия</p>
+                    </div>
+                    <div class="card__img">
+                        <img src="../img/coffee/supremo.jpg" alt="supremo">
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__img">
+                        <img src="../img/coffee/extra.jpg" alt="extra">
+                    </div>
+                    <div class="card__desc">
+                        <h3 class="card__title">Extra</h3>
+                        <p class="card__text">Немного уступает по качеству, но, тем не менее, тоже имеет высокую
+                             класс. Размер кофейных зерен немного меньше, чем у Supremo, и этот
+                            показатель является одним из определяющих факторов при сортировке кофейных зерен. Вкус кофе
+                            очень сильный и полный. Страна: Колумбия</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__desc">
+                        <h3 class="card__title">Excelso</h3>
+                        <p class="card__text">Кофе Excelso мягче и кислее высшего сорта. Он получен
+                            смешиванием двух сортов. Напиток получается мягче и с более высокой
+                            кислинкой, с ярко выраженным ароматом и оттенком чернослива. Excelso производится путем смешивания двух
+                            сортов высшего качества, высшего и экстра. Страна: Колумбия</p>
+                    </div>
+                    <div class="card__img">
+                        <img src="../img/coffee/excelso.jpg" alt="excelso">
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__img">
+                        <img src="../img/coffee/antigua.jpg" alt="antigua">
+                    </div>
+                    <div class="card__desc">
+                        <h3 class="card__title">Antigua volcanic</h3>
+                        <p class="card__text">Вкус самого известного сорта "Antigua volcanic" известен
+                            сложным, тяжелым вкусом с горчинкой, крепостью и изысканным ароматом с нотками дыма.
+                            Страна: Гватемала. Этот сорт кофе родом из горных районов.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__desc">
+                        <h3 class="card__title">Santos</h3>
+                        <p class="card__text">Считается самым лучшим и востребованным. Мировой стандарт из настоящего
+                            арабика. В нем сочетаются легкая терпкость, легкая кислинка и шоколадное послевкусие. Вкус
+                            из-за того, что в Бразилии практически нет холмов, дающих кофейным зернам
+                            кислинку и горечь. Страна: Бразилия</p>
+                    </div>
+                    <div class="card__img">
+                        <img src="../img/coffee/santos.jpg" alt="santos">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about-us" id="about">
+            <div class="container">
+                <h2 class="title">о нас</h2>
+                <div class="border-1">
+                    <div class="border-2">
+                        <div class="about-us__desc">
+                            <h3 class="title">Добро пожаловать в наш замечательный магазин кофе в зернах!</h3>
+                            <p class="text">Мы - поставщики качественного кофе из Колумбии, Гватемалы и Бразилии. Мы
+                                рады
+                                каждому клиенту, поэтому кофе можно купить оптом и в розницу. Также у нас есть скидки на
+                                для
+                                постоянных клиентов. <br>
+                                Уже 10 лет мы радуем вас качественным и вкусным кофе.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        </section>
+        <section class="quote" id="quote">
+            <div class="container">
+                <h2 class="title">Отзывы</h2>
+                <div class="wrapper">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <p class="swiper-slide__text">
+                                    С этим магазином сотрудничаю уже год. Сервис отличный. Вежливый
+                                    консультанты и доставка без задержек. Цезивный кофе. Я рекомендую этот магазин.
+                                </p>
+                                <span class="swiper-slide__sign">Дж. Элмонд</span>
+                            </div>
+                            <div class="swiper-slide">
+                                <p class="swiper-slide__text">
+                                    С этим магазином сотрудничаю уже год. Сервис отличный. Вежливый
+                                    консультанты и доставка без задержек. Цезивный кофе. Я рекомендую этот магазин.
+                                </p>
+                                <span class="swiper-slide__sign">Эминем</span>
+                            </div>
+                            <div class="swiper-slide">
+                                <p class="swiper-slide__text">
+                                    С этим магазином сотрудничаю уже год. Сервис отличный. Вежливый
+                                    консультанты и доставка без задержек. Цезивный кофе. Я рекомендую этот магазин.
+                                </p>
+                                <span class="swiper-slide__sign">Рианна</span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="swiper-pagination">
+                        <div class="swiper-pagination-bullet"></div>
+                        <div class="swiper-pagination-bullet"></div>
+                        <div class="swiper-pagination-bullet"></div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contact" id="contact">
+            <div class="container">
+                <h2 class="title">свяжитесь с нами</h2>
+                <div class="row">
+                    <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d448.9435102852156!2d30.51601548657645!3d50.46702386850702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce1534ba9ac9%3A0xa06de022f3898d0e!2z0YPQuy4g0KXQvtGA0LjQstCwLCAyNywg0JrQuNC10LIsIDAyMDAw!5e0!3m2!1sru!2sua!4v1612882430788!5m2!1sru!2sua"  frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    </div>
+                    <div class="contacts">
+                        <h3 class="title">
+                            Coffee Beans
+                        </h3>
+                        <a href="tel:88007777777" class="tel">8 (800) 777 77 77</a>
+                        <a href="tel:+380732554578" class="tel">+ 38 (073) 255 45 78</a>
+                        <a href="tel:+380952554578" class="tel">+ 38 (095) 255 45 78</a>
+                        <a href="tel:+30962554578" class="tel">+ 38 (096) 255 45 78</a>
+                        <a href="mailto:coffee@beans.com" class="mail">coffee@beans.com</a>
+                        <div class="adress">
+                            Контрактовая площадь<br>
+                            ул. Хорива, 27<br>
+                            г. Киев,  02000<br>
+                            Украина
+                        </div>
+                        <button class="message js-message">написать</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="copyright">
+                © 2021 Coffee Beans PSD. Designed by Vladislava
+            </div>
+        </footer>
+    </main>
+    <script src="js/main.min.js"></script>
+    <script src="js/vendor.min.js"></script>
+</body>
+</html>

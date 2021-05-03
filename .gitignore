@@ -4,6 +4,11 @@
 .Spotlight-V100
 .Trashes
 .idea
+gulp-task
+src
+.babelrc.js
+.bemrc.js
+.browserlistrc
 .vscode
 .github
 .env
@@ -11,6 +16,5 @@ ehthumbs.db
 Thumbs.db
 _config.yml
 node_modules
-dist
 yarn.lock
 package-lock.json
